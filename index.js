@@ -6,14 +6,10 @@ const app = express();
 
 const whitelist = ['https://yoursite.com','http://localhost:3500'];
 const corsOptions = {
-    origin: (origin,callback) => {
-        if(whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not Allowed by CORS'));
-        }
+    origin: (origin, callback) => {
+        callback(null, true)
     },
-    optionSuccessStatus: 200
+    optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
 
