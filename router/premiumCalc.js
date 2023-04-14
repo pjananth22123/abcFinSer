@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/',(req,res) => {
+router.post('/',(req,res) => {
     let name = req.body.name;
     let age = req.body.age;
     let mobileNo = req.body.mobileNo;

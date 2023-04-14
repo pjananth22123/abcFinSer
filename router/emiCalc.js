@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/',(req,res) => {
+router.post('/',(req,res) => {
     let loanAmount = req.body.loanAmount;
     let intRate = req.body.intRate;
     let monthIntRate = intRate/1200;
