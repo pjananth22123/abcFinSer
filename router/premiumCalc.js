@@ -43,7 +43,7 @@ router.get('/',(req,res) => {
             } 
         }
     }
-
+    res.type('application/json');
     res.send(JSON.stringify({"premium":emiCalc}));
 
 });

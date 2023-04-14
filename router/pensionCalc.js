@@ -14,6 +14,7 @@ router.get('/',(req,res) => {
     let totalPensionAmt = (req.body.retirementAge - req.body.currentAge) * 12 * monthlyPremium;
     totalPensionAmt = totalPensionAmt + currentSavings;
     let returnAmount = Math.trunc(totalPensionAmt * 2.5);
+    res.type('application/json');
     res.send(JSON.stringify({"totalPensionSum":returnAmount}));
 
 });
