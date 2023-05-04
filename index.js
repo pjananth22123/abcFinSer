@@ -21,6 +21,7 @@ app.use('/banking/loanOnboard',require('./router/loanOnboard'));
 app.use('/ins/registerCallback',require('./router/registerCallback'));
 app.use('/stk/pensionCalc',require('./router/pensionCalc'));
 app.use('/ins/calcPremium',require('./router/premiumCalc'));
+app.use('/chart/getData',require('./router/chartData'));
 
 app.all('*',(req,res) => {
     res.status(404);
