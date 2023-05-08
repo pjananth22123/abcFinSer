@@ -22,6 +22,7 @@ app.use('/ins/registerCallback',require('./router/registerCallback'));
 app.use('/stk/pensionCalc',require('./router/pensionCalc'));
 app.use('/ins/calcPremium',require('./router/premiumCalc'));
 app.use('/chart/getData',require('./router/chartData'));
+app.use('/chart/getMultiData',require('./router/multiChartData'));
 
 app.all('*',(req,res) => {
     res.status(404);
