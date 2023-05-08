@@ -2,8 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/',(req,res) => {
-    var jsonData = {};
-    var key = 'Chart Data';
+    var jsonData = {
+        labels: ['Black', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [20, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      };
+    /** var key = 'Chart Data';
     jsonData[key] = []; 
     var data = {
         labels: 'Red',
@@ -41,7 +48,7 @@ router.get('/',(req,res) => {
     jsonData[key].push(data3);
     jsonData[key].push(data4);
     jsonData[key].push(data5);
-    jsonData[key].push(data6);
+    jsonData[key].push(data6);**/
 
     res.type('application/json');
     res.send(JSON.stringify(jsonData));
